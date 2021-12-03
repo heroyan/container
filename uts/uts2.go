@@ -30,7 +30,7 @@ func run2() {
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	cmd.SysProcAttr = &syscall.SysProcAttr{
-		Cloneflags: syscall.CLONE_NEWUTS | syscall.CLONE_NEWPID,
+		//Cloneflags: syscall.CLONE_NEWUTS | syscall.CLONE_NEWPID,
 	}
 	check(cmd.Run())
 }
@@ -42,6 +42,6 @@ func child() {
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	check(syscall.Sethostname([]byte("newhost")))
+	//check(syscall.Sethostname([]byte("newhost")))
 	check(cmd.Run())
 }
