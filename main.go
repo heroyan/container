@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/heroyan/container/cache"
 	"log"
 
@@ -48,6 +49,22 @@ func test2()  {
 	log.Println(lru.Get(4))
 }
 
+func pl()  {
+	//cache.Pailie([]int{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20})
+	cache.Pailie([]int{1,2,3,4,5,6,7,8,9,10,11})
+}
+
+func lock()  {
+	fmt.Println(cache.Test([]string{"0201","0101","0102","1212","2002"}, "0202"))
+	fmt.Println(cache.Test([]string{"8888"}, "0009"))
+	fmt.Println(cache.Test([]string{"0000"}, "8888"))
+	fmt.Println(cache.Test([]string{"8887","8889","8878","8898","8788","8988","7888","9888"}, "8888"))
+}
+
 func main() {
-	test2()
+	//pl()
+	//fmt.Println(cache.Test2(100))
+	//fmt.Println(cache.Test2(2))
+	//fmt.Println(cache.Test2(4))
+	cache.TestCoin()
 }
