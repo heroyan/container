@@ -66,5 +66,6 @@ func main() {
 	//fmt.Println(cache.Test2(100))
 	//fmt.Println(cache.Test2(2))
 	//fmt.Println(cache.Test2(4))
-	cache.TestCoin()
+	//fmt.Println(cache.TestQueen(4))
+	fmt.Println(cache.TestQueen(5))
 }
